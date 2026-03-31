@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# Vora — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page de **Vora**, la plataforma móvil para encontrar alquileres y oportunidades de empleo en tu ciudad.
 
-Currently, two official plugins are available:
+## Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + TypeScript
+- **Vite** — bundler ultrarrápido
+- **Tailwind CSS v4** — estilos utilitarios con `@tailwindcss/vite`
+- **Framer Motion** — animaciones de scroll y entrada
+- **Lucide React** — iconografía
+- **Supabase** — datos en tiempo real (usuarios, publicaciones, ciudades)
 
-## React Compiler
+## Configuración
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/LuisKinnDC/AppVoraLanding.git
+   cd AppVoraLanding
+   ```
 
-## Expanding the ESLint configuration
+2. Instala dependencias:
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+3. Crea un archivo `.env` en la raíz con tus credenciales de Supabase:
+   ```
+   VITE_SUPABASE_URL=https://tu-proyecto.supabase.co
+   VITE_SUPABASE_ANON_KEY=tu_anon_key
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+4. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Estructura del proyecto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/       # Secciones de la landing
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── Stats.tsx
+│   ├── Features.tsx
+│   ├── HowItWorks.tsx
+│   ├── Testimonials.tsx
+│   ├── CTA.tsx
+│   └── Footer.tsx
+├── hooks/
+│   └── useStats.ts   # Hook que consulta Supabase
+├── lib/
+│   ├── supabase.ts   # Cliente de Supabase
+│   └── constants.ts  # URL de descarga y constantes
+├── assets/           # Imágenes (logo, screenshots)
+├── App.tsx
+├── main.tsx
+└── index.css         # Tailwind v4 + tema personalizado
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Comando          | Descripción                        |
+| ---------------- | ---------------------------------- |
+| `npm run dev`    | Servidor de desarrollo con HMR     |
+| `npm run build`  | Compilación para producción        |
+| `npm run preview`| Vista previa del build de producción|
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Licencia
+
+© 2026 Vora. Todos los derechos reservados.
+
