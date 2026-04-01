@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import logoVora from '../assets/LogoVora.png';
+import logoVora from '../assets/VhoraGO_Logo.png';
 import { DOWNLOAD_URL } from '../lib/constants';
 
 export default function Navbar() {
@@ -22,8 +22,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <img src={logoVora} alt="Vora" className="w-9 h-9 object-contain" />
-          <span className="text-xl font-bold tracking-tight text-[#0F1A1B]">Vora</span>
+          <img src={logoVora} alt="VhoraGO" className="w-9 h-9 object-contain" />
+          <span className="text-xl font-bold tracking-tight text-[#0F1A1B]">VhoraGO</span>
         </a>
 
         {/* Desktop nav */}

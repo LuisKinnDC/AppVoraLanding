@@ -14,7 +14,7 @@ export default function Stats() {
     <section className="py-10 border-y border-[#D4E0E1] bg-white/50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <p className="text-center text-sm font-medium text-[#708C8E] mb-8">
-          Miles de personas ya encontraron trabajo o vivienda con Vora
+          Miles de personas ya encontraron trabajo o vivienda con VhoraGO
         </p>
         <div className="flex flex-wrap justify-center gap-12 lg:gap-24">
           {items.map(({ value, label }) => (

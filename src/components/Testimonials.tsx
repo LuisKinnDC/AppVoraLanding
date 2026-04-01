@@ -38,7 +38,7 @@ export default function Testimonials() {
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F1A1B] mb-4">
             Lo que dicen nuestros usuarios
           </h2>
-          <p className="text-lg text-[#708C8E]">Miles de personas ya confían en Vora.</p>
+          <p className="text-lg text-[#708C8E]">Miles de personas ya confían en VhoraGO.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">

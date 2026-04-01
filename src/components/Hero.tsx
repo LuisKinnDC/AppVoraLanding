@@ -118,7 +118,7 @@ export default function Hero() {
               <div className="phone-screen">
                 <img
                   src={homeScreen}
-                  alt="Vora App - Pantalla principal"
+                  alt="VhoraGO App - Pantalla principal"
                   className="w-full h-full object-cover object-top"
                 />
               </div>

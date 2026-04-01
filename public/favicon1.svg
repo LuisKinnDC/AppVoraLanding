@@ -12,7 +12,7 @@
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
-   sodipodi:docname="VhoraGO_BordeRedondo.svg"
+   sodipodi:docname="VhoraGO_SinFondo.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +173,7 @@
        inkscape:label="Fondo" /><path
        id="rect27"
        d="M 79.826732,0.0204096 H 321.02078 a 79.005203,79.005203 45 0 1 79.0052,79.0052034 V 320.21966 a 79.741263,79.741263 135 0 1 -79.74126,79.74126 H 77.618553 A 77.533084,77.533084 45 0 1 0.08546868,322.42784 V 79.761673 A 79.741263,79.741263 135 0 1 79.826732,0.0204096 Z"
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;paint-order:stroke fill markers"
+       style="display:none;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;paint-order:stroke fill markers"
        sodipodi:nodetypes="ccccc"
        inkscape:path-effect="#path-effect31"
        inkscape:original-d="M 0.08546868,0.0204096 H 400.02598 V 399.96092 H 0.08546868 Z"

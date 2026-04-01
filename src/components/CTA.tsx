@@ -24,7 +24,7 @@ export default function CTA() {
               ¿Listo para empezar?
             </h2>
             <p className="text-lg md:text-xl text-white/80 mb-10 max-w-xl mx-auto">
-              Descarga Vora y accede a cientos de ofertas de empleo y opciones de alquiler en tu ciudad. Gratis y sin complicaciones.
+              Descarga VhoraGO y accede a cientos de ofertas de empleo y opciones de alquiler en tu ciudad. Gratis y sin complicaciones.
             </p>
             <a
               href={DOWNLOAD_URL}

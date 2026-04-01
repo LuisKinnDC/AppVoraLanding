@@ -1,4 +1,4 @@
-import logoVora from '../assets/LogoVora.png';
+import logoVora from '../assets/VhoraGO_Logo.png';
 
 export default function Footer() {
   return (
@@ -7,8 +7,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <img src={logoVora} alt="Vora" className="w-9 h-9 object-contain" />
-            <span className="font-bold text-xl text-[#0F1A1B]">Vora</span>
+            <img src={logoVora} alt="VhoraGO" className="w-9 h-9 object-contain" />
+            <span className="font-bold text-xl text-[#0F1A1B]">VhoraGO</span>
           </a>
 
           {/* Links */}
@@ -46,7 +46,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-[#D4E0E1] text-sm text-[#708C8E]">
-          <p>© {new Date().getFullYear()} Vora. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} VhoraGO. Todos los derechos reservados.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-[#0F1A1B] transition-colors">
               Política de privacidad

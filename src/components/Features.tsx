@@ -44,7 +44,7 @@ export default function Features() {
             Todo lo que necesitas, en un solo lugar
           </h2>
           <p className="text-lg text-[#708C8E]">
-            Diseñamos Vora para que encontrar trabajo o vivienda sea tan simple como abrir la app.
+            Diseñamos VhoraGO para que encontrar trabajo o vivienda sea tan simple como abrir la app.
           </p>
         </motion.div>
 

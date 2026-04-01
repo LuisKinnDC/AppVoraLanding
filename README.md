@@ -1,6 +1,6 @@
-# Vora — Landing Page
+# VhoraGO — Landing Page
 
-Landing page de **Vora**, la plataforma móvil para encontrar alquileres y oportunidades de empleo en tu ciudad.
+Landing page de **VhoraGO**, la plataforma móvil para encontrar alquileres y oportunidades de empleo en tu ciudad.
 
 ## Tecnologías
 
@@ -69,5 +69,5 @@ src/
 
 ## Licencia
 
-© 2026 Vora. Todos los derechos reservados.
+© 2026 VhoraGO. Todos los derechos reservados.
 
