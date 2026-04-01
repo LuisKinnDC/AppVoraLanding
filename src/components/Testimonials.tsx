@@ -5,23 +5,29 @@ const testimonials = [
   {
     quote:
       'Encontré un cuarto cerca de mi universidad en menos de 10 minutos. Antes tenía que caminar horas buscando carteles.',
-    name: 'Carla M.',
+    name: 'Luz D.',
     role: 'Estudiante universitaria',
-    initial: 'C',
+    initial: 'LD',
   },
   {
     quote:
       'Publiqué un anuncio de alquiler y en el mismo día me contactaron 5 personas por WhatsApp. Es increíble el alcance.',
-    name: 'Roberto F.',
+    name: 'Yezyon Z.',
     role: 'Propietario',
-    initial: 'R',
+    initial: 'YZ',
   },
   {
     quote:
       'Conseguí un trabajo de medio tiempo que se ajustaba perfecto a mi horario. La app es súper fácil de usar.',
-    name: 'Ana S.',
-    role: 'Diseñadora freelance',
-    initial: 'A',
+    name: 'Jhan P.',
+    role: 'Programador freelance',
+    initial: 'JP',
+  },
+    {quote:
+      'Conseguí un trabajo de tiempo completo que se ajustaba perfecto a mi horario. La app es súper fácil de usar.',
+    name: 'Juan C.',
+    role: 'Diseñador freelance',
+    initial: 'JC',
   },
 ];
 
