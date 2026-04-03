@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { IconMenu2, IconX, IconDownload } from '@tabler/icons-react';
 import logoVora from '../assets/VhoraGO_Logo.png';
 import { DOWNLOAD_URL } from '../lib/constants';
 
@@ -41,15 +41,16 @@ export default function Navbar() {
             href={DOWNLOAD_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#00575F] hover:bg-[#00393F] text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md active:scale-95"
+            className="btn-shimmer text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md active:scale-95 inline-flex items-center gap-2"
           >
+            <IconDownload size={16} />
             Descargar App
           </a>
         </div>
 
         {/* Mobile toggle */}
         <button className="md:hidden text-[#0F1A1B]" onClick={() => setOpen(!open)} aria-label="Menu">
-          {open ? <X size={24} /> : <Menu size={24} />}
+          {open ? <IconX size={24} /> : <IconMenu2 size={24} />}
         </button>
       </div>
 
@@ -71,8 +72,9 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="bg-[#00575F] text-white px-6 py-2.5 rounded-full text-sm font-medium text-center"
+            className="btn-shimmer text-white px-6 py-2.5 rounded-full text-sm font-medium text-center inline-flex items-center justify-center gap-2"
           >
+            <IconDownload size={16} />
             Descargar App
           </a>
         </div>

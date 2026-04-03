@@ -1,45 +1,45 @@
 import { motion } from 'framer-motion';
 import {
-  CheckCircle2,
-  LayoutDashboard,
-  BarChart3,
-  ArrowRight,
-  Search,
-  Upload,
-  Eye,
-  Heart,
-  MapPin,
-} from 'lucide-react';
+  IconCircleCheckFilled,
+  IconLayoutDashboard,
+  IconChartBar,
+  IconArrowRight,
+  IconSearch,
+  IconUpload,
+  IconEye,
+  IconHeart,
+  IconMapPin,
+} from '@tabler/icons-react';
 
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="py-24 bg-[#F4F7F7] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 perspective-container">
         {/* SECTION 1: For seekers */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
           {/* Visual */}
           <motion.div
-            className="order-2 lg:order-1 relative h-[500px] rounded-[40px] bg-white border border-[#D4E0E1] shadow-xl overflow-hidden flex items-center justify-center"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="order-2 lg:order-1 relative h-[500px] rounded-[40px] bg-white border border-[#D4E0E1] shadow-xl overflow-hidden flex items-center justify-center card-3d"
+            initial={{ opacity: 0, x: -30, rotateY: 8 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.7, type: 'spring', stiffness: 80 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#00575F]/5 to-transparent" />
             <div className="relative z-10 w-3/4 flex flex-col gap-4">
               {/* Search bar */}
               <div className="h-12 w-full bg-[#F4F7F7] rounded-2xl border border-[#D4E0E1] flex items-center px-4 gap-3">
-                <Search className="w-4 h-4 text-[#00575F]" />
+                <IconSearch size={16} className="text-[#00575F]" />
                 <div className="h-2 w-1/3 bg-[#D4E0E1] rounded-full" />
               </div>
               {/* Active result */}
               <div className="h-16 w-full bg-[#00575F]/5 rounded-2xl border border-[#00575F]/20 flex items-center px-4 gap-3 transform -translate-y-2 translate-x-4 shadow-sm">
                 <div className="w-4 h-4 rounded-full bg-[#00575F] flex items-center justify-center">
-                  <CheckCircle2 className="w-3 h-3 text-white" />
+                  <IconCircleCheckFilled size={12} className="text-white" />
                 </div>
                 <div className="h-2 w-1/2 bg-[#00575F]/40 rounded-full" />
                 <div className="ml-auto flex items-center gap-1 px-3 py-1 bg-white rounded-full">
-                  <MapPin className="w-2.5 h-2.5 text-[#00575F]" />
+                  <IconMapPin size={10} className="text-[#00575F]" />
                   <span className="text-[10px] font-bold text-[#00575F]">Cerca de ti</span>
                 </div>
               </div>
@@ -64,7 +64,7 @@ export default function HowItWorks() {
             transition={{ duration: 0.5 }}
           >
             <div className="w-12 h-12 rounded-full bg-[#00575F]/10 flex items-center justify-center text-[#00575F] mb-6">
-              <LayoutDashboard className="w-6 h-6" />
+              <IconLayoutDashboard size={24} />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F1A1B] mb-6">Para quienes buscan</h2>
             <p className="text-lg text-[#708C8E] mb-8 leading-relaxed">
@@ -78,7 +78,7 @@ export default function HowItWorks() {
                 'Contacta directo por WhatsApp o teléfono',
               ].map((text) => (
                 <li key={text} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#00575F] shrink-0 mt-0.5" />
+                  <IconCircleCheckFilled size={20} className="text-[#00575F] shrink-0 mt-0.5" />
                   <span className="text-[#2D4A4C]">{text}</span>
                 </li>
               ))}
@@ -96,7 +96,7 @@ export default function HowItWorks() {
             transition={{ duration: 0.5 }}
           >
             <div className="w-12 h-12 rounded-full bg-[#00A86B]/10 flex items-center justify-center text-[#00A86B] mb-6">
-              <BarChart3 className="w-6 h-6" />
+              <IconChartBar size={24} />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F1A1B] mb-6">Para quienes publican</h2>
             <p className="text-lg text-[#708C8E] mb-8 leading-relaxed">
@@ -109,7 +109,7 @@ export default function HowItWorks() {
                 'Gestiona tus publicaciones desde tu perfil',
               ].map((text) => (
                 <li key={text} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#00A86B] shrink-0 mt-0.5" />
+                  <IconCircleCheckFilled size={20} className="text-[#00A86B] shrink-0 mt-0.5" />
                   <span className="text-[#2D4A4C]">{text}</span>
                 </li>
               ))}
@@ -119,17 +119,17 @@ export default function HowItWorks() {
               className="mt-10 inline-flex items-center gap-2 text-[#00575F] font-bold hover:text-[#00393F] transition-colors group"
             >
               Empieza a publicar
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <IconArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
 
           {/* Visual — chart / stats */}
           <motion.div
-            className="relative h-[500px] rounded-[40px] bg-[#00575F] border border-[#00393F] shadow-2xl overflow-hidden flex items-center justify-center"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="relative h-[500px] rounded-[40px] bg-[#00575F] border border-[#00393F] shadow-2xl overflow-hidden flex items-center justify-center card-3d"
+            initial={{ opacity: 0, x: 30, rotateY: -8 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.7, type: 'spring', stiffness: 80 }}
           >
             <div className="relative z-10 w-3/4 h-3/4 flex flex-col justify-end gap-2 pb-8">
               <div className="absolute top-8 left-0">
@@ -179,9 +179,9 @@ export default function HowItWorks() {
             viewport={{ once: true }}
           >
             {/* Big card */}
-            <div className="md:col-span-2 bg-white rounded-3xl p-8 shadow-sm border border-[#D4E0E1] relative overflow-hidden flex flex-col justify-end min-h-[200px]">
+            <div className="md:col-span-2 card-3d bg-white rounded-3xl p-8 shadow-sm border border-[#D4E0E1] relative overflow-hidden flex flex-col justify-end min-h-[200px]">
               <div className="absolute top-0 right-0 p-8 opacity-5">
-                <Eye className="w-48 h-48" />
+                <IconEye size={192} />
               </div>
               <div className="relative z-10">
                 <p className="text-[#00575F] font-medium text-sm mb-2">Sin registro</p>
@@ -191,25 +191,25 @@ export default function HowItWorks() {
               </div>
             </div>
             {/* Small cards */}
-            <div className="bg-white rounded-3xl p-6 shadow-sm border border-[#D4E0E1] flex flex-col justify-between">
+            <div className="card-3d bg-white rounded-3xl p-6 shadow-sm border border-[#D4E0E1] flex flex-col justify-between">
               <div className="w-12 h-12 rounded-full bg-[#00A86B]/10 flex items-center justify-center text-[#00A86B] mb-4">
-                <Heart className="w-6 h-6" />
+                <IconHeart size={24} />
               </div>
               <div>
                 <h4 className="font-bold text-[#0F1A1B] text-lg">Favoritos</h4>
                 <p className="text-sm text-[#708C8E] mt-1">Guarda anuncios para verlos después</p>
               </div>
             </div>
-            <div className="bg-white rounded-3xl p-6 shadow-sm border border-[#D4E0E1] flex flex-col justify-between">
+            <div className="card-3d card-3d-alt bg-white rounded-3xl p-6 shadow-sm border border-[#D4E0E1] flex flex-col justify-between">
               <div className="w-12 h-12 rounded-full bg-[#00575F]/10 flex items-center justify-center text-[#00575F] mb-4">
-                <Upload className="w-6 h-6" />
+                <IconUpload size={24} />
               </div>
               <div>
                 <h4 className="font-bold text-[#0F1A1B] text-lg">Publica rápido</h4>
                 <p className="text-sm text-[#708C8E] mt-1">Con fotos, precio y ubicación</p>
               </div>
             </div>
-            <div className="bg-[#00575F] rounded-3xl p-6 shadow-sm flex flex-col justify-between text-white relative overflow-hidden">
+            <div className="card-3d bg-[#00575F] rounded-3xl p-6 shadow-sm flex flex-col justify-between text-white relative overflow-hidden">
               <div className="absolute -bottom-4 -right-4 bg-white/10 w-24 h-24 rounded-full blur-xl" />
               <p className="text-5xl font-bold tracking-tighter">24/7</p>
               <p className="text-sm font-medium opacity-90">Accede en cualquier momento</p>

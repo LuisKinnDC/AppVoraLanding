@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { Home, Briefcase, MessageCircle } from 'lucide-react';
+import { IconHome, IconBriefcase, IconMessageCircle } from '@tabler/icons-react';
 
 const features = [
   {
-    icon: <Home className="w-6 h-6" />,
+    icon: <IconHome size={24} />,
     title: 'Alquileres',
     description:
       'Encuentra habitaciones, cuartos, departamentos y minidepartamentos en alquiler cerca de ti. Filtra por precio, distrito y tipo de inmueble.',
@@ -11,7 +11,7 @@ const features = [
     bg: 'bg-white',
   },
   {
-    icon: <Briefcase className="w-6 h-6" />,
+    icon: <IconBriefcase size={24} />,
     title: 'Oportunidades de empleo',
     description:
       'Accede a ofertas de trabajo: medio tiempo, tiempo completo y empleos temporales. Contacta directamente al empleador con un solo toque.',
@@ -19,7 +19,7 @@ const features = [
     bg: 'bg-white',
   },
   {
-    icon: <MessageCircle className="w-6 h-6" />,
+    icon: <IconMessageCircle size={24} />,
     title: 'Contacto directo',
     description:
       'Cada publicación incluye teléfono y WhatsApp del anunciante. Sin intermediarios, sin demoras: comunícate de inmediato.',
@@ -35,10 +35,10 @@ export default function Features() {
         {/* Heading */}
         <motion.div
           className="text-center max-w-2xl mx-auto mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, type: 'spring', stiffness: 100 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F1A1B] mb-4">
             Todo lo que necesitas, en un solo lugar
@@ -49,15 +49,15 @@ export default function Features() {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 perspective-container">
           {features.map((f, i) => (
             <motion.div
               key={f.title}
-              className="bg-[#F4F7F7] rounded-3xl p-8 border border-[#D4E0E1] hover:shadow-lg transition-all duration-300 group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className="card-3d bg-[#F4F7F7] rounded-3xl p-8 border border-[#D4E0E1] transition-all duration-300 group"
+              initial={{ opacity: 0, y: 30, rotateX: 10 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              transition={{ delay: i * 0.15, duration: 0.6, type: 'spring', stiffness: 100 }}
             >
               <div className={`w-12 h-12 rounded-xl ${f.bg} shadow-sm flex items-center justify-center ${f.color} mb-6 group-hover:scale-110 transition-transform`}>
                 {f.icon}

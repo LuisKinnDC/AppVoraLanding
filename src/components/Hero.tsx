@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Play, Home, Star } from 'lucide-react';
+import { IconDownload, IconHome, IconStarFilled } from '@tabler/icons-react';
 import homeScreen from '../assets/Home.png';
 import { useStats } from '../hooks/useStats';
 import { DOWNLOAD_URL } from '../lib/constants';
@@ -42,7 +42,7 @@ export default function Hero() {
             >
               Trabajo y vivienda,{' '}
               <br className="hidden lg:block" />
-              en un solo lugar.
+              <span className="gradient-text">en un solo lugar.</span>
             </motion.h1>
 
             {/* Description */}
@@ -66,9 +66,9 @@ export default function Hero() {
                 href={DOWNLOAD_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-[#00575F] hover:bg-[#00393F] text-white px-8 py-4 rounded-full text-base font-medium transition-all shadow-lg hover:shadow-xl active:scale-95"
+                className="flex items-center justify-center gap-2 btn-shimmer text-white px-8 py-4 rounded-full text-base font-medium transition-all shadow-lg hover:shadow-xl active:scale-95"
               >
-                <Play className="w-4 h-4" fill="currentColor" />
+                <IconDownload size={16} />
                 Descargar App
               </a>
               <a
@@ -106,13 +106,13 @@ export default function Hero() {
 
           {/* Right: phone mockup */}
           <motion.div
-            className="relative flex justify-center lg:justify-end items-center h-[700px]"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
+            className="relative flex justify-center lg:justify-end items-center h-[700px] perspective-container"
+            initial={{ opacity: 0, scale: 0.9, rotateY: 15 }}
+            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+            transition={{ delay: 0.3, duration: 0.8, type: 'spring', stiffness: 80 }}
           >
             {/* Phone */}
-            <div className="phone-mockup relative z-10 bg-white">
+            <div className="phone-mockup phone-tilt relative z-10 bg-white">
               <div className="phone-notch" />
               <div className="phone-indicator" />
               <div className="phone-screen">
@@ -125,9 +125,9 @@ export default function Hero() {
             </div>
 
             {/* Floating chips */}
-            <div className="absolute top-28 -left-10 z-20 animate-float bg-white p-3 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center gap-3 border border-[#D4E0E1]">
+            <div className="absolute top-28 -left-10 z-20 animate-float chip-3d glass p-3 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center gap-3">
               <div className="w-9 h-9 rounded-full bg-[#E6F7F1] flex items-center justify-center text-[#00A86B]">
-                <Home className="w-4 h-4" />
+                <IconHome size={16} />
               </div>
               <div>
                 <p className="text-xs font-bold text-[#0F1A1B]">Cuarto encontrado</p>
@@ -135,10 +135,10 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="absolute bottom-44 -right-8 z-20 animate-float-delayed bg-white p-3 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex flex-col gap-1.5 border border-[#D4E0E1] min-w-[130px]">
+            <div className="absolute bottom-44 -right-8 z-20 animate-float-delayed chip-3d glass p-3 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex flex-col gap-1.5 min-w-[130px]">
               <div className="flex justify-between items-center">
                 <p className="text-[10px] font-medium text-[#708C8E]">Valoración</p>
-                <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+                <IconStarFilled size={12} className="text-yellow-400" />
               </div>
               <p className="text-2xl font-bold text-[#00575F]">Proceso..<span className="text-xs text-[#708C8E] font-normal">/5</span></p>
             </div>
