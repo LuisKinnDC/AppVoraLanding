@@ -25,9 +25,9 @@ export default function AdminLayout() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0F1A1B] flex">
+    <div className="min-h-screen bg-[#0F1A1B]">
       {/* Sidebar */}
-      <aside className="hidden md:flex flex-col w-64 bg-[#1A2E2F] border-r border-[#2D4A4C]">
+      <aside className="hidden md:flex fixed top-0 left-0 h-full flex-col w-64 bg-[#1A2E2F] border-r border-[#2D4A4C] z-40">
         {/* Logo */}
         <div className="flex items-center gap-2.5 px-6 py-5 border-b border-[#2D4A4C]">
           <img src={logoVora} alt="VhoraGO" className="w-8 h-8 object-contain" />
@@ -104,7 +104,7 @@ export default function AdminLayout() {
       </div>
 
       {/* Main content */}
-      <main className="flex-1 overflow-auto">
+      <main className="md:ml-64">
         <div className="pt-16 md:pt-0 min-h-screen">
           <Outlet />
         </div>

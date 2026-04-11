@@ -90,6 +90,7 @@ function ConfirmModal({ open, title, message, confirmLabel = 'Sí, eliminar', lo
   );
 }
 
+
 export default function DashboardPage() {
   // Reports state
   const [reports, setReports] = useState<Report[]>([]);
@@ -316,7 +317,7 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="p-6 md:p-8 space-y-8">
+    <div className="p-2 md:p-8 w-full space-y-8">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
@@ -385,8 +386,8 @@ export default function DashboardPage() {
         )}
       </div>
 
-            {/* ─── Delete Publication by ID ─── */}
-      <div className="bg-[#1A2E2F] border border-[#2D4A4C] rounded-2xl p-5">
+          {/* ─── Delete Publication by ID ─── */}
+          <div className="bg-[#1A2E2F] border border-[#2D4A4C] rounded-2xl p-5">
         <h2 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
           <IconTrash size={16} className="text-red-400" />
           Borrar publicación por ID
