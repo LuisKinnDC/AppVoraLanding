@@ -385,6 +385,40 @@ export default function DashboardPage() {
         )}
       </div>
 
+            {/* ─── Delete Publication by ID ─── */}
+      <div className="bg-[#1A2E2F] border border-[#2D4A4C] rounded-2xl p-5">
+        <h2 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+          <IconTrash size={16} className="text-red-400" />
+          Borrar publicación por ID
+        </h2>
+        <div className="flex gap-3">
+          <input
+            type="text"
+            value={deletePubId}
+            onChange={(e) => { setDeletePubId(e.target.value); setDeletePubMsg(null); }}
+            onKeyDown={(e) => e.key === 'Enter' && handleDeletePublication()}
+            placeholder="Pega el ID de la publicación a eliminar..."
+            className="flex-1 bg-[#0F1A1B] border border-[#2D4A4C] text-white rounded-xl px-4 py-2.5 text-sm placeholder:text-[#526263] focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400/30 transition-colors font-mono"
+          />
+          <button
+            onClick={handleDeletePublication}
+            disabled={deletePubLoading || !deletePubId.trim()}
+            className="bg-red-500/20 hover:bg-red-500/30 text-red-400 px-5 py-2.5 rounded-xl text-sm font-medium transition-colors flex items-center gap-2 disabled:opacity-50"
+          >
+            {deletePubLoading ? <IconLoader2 size={16} className="animate-spin" /> : <IconTrash size={16} />}
+            Eliminar
+          </button>
+        </div>
+        {deletePubMsg && (
+          <p className={`mt-3 text-sm flex items-center gap-2 ${
+            deletePubMsg.type === 'ok' ? 'text-[#00A86B]' : 'text-red-400'
+          }`}>
+            {deletePubMsg.type === 'ok' ? <IconCheck size={14} /> : <IconAlertTriangle size={14} />}
+            {deletePubMsg.text}
+          </p>
+        )}
+      </div>
+
       {/* Reports table */}
       <div className="bg-[#1A2E2F] border border-[#2D4A4C] rounded-2xl overflow-hidden">
         <div className="px-5 py-4 border-b border-[#2D4A4C] flex items-center justify-between">
@@ -522,39 +556,6 @@ export default function DashboardPage() {
         ) : null}
       </div>
 
-      {/* ─── Delete Publication by ID ─── */}
-      {/*<div className="bg-[#1A2E2F] border border-[#2D4A4C] rounded-2xl p-5">
-        <h2 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
-          <IconTrash size={16} className="text-red-400" />
-          Borrar publicación por ID
-        </h2>
-        <div className="flex gap-3">
-          <input
-            type="text"
-            value={deletePubId}
-            onChange={(e) => { setDeletePubId(e.target.value); setDeletePubMsg(null); }}
-            onKeyDown={(e) => e.key === 'Enter' && handleDeletePublication()}
-            placeholder="Pega el ID de la publicación a eliminar..."
-            className="flex-1 bg-[#0F1A1B] border border-[#2D4A4C] text-white rounded-xl px-4 py-2.5 text-sm placeholder:text-[#526263] focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400/30 transition-colors font-mono"
-          />
-          <button
-            onClick={handleDeletePublication}
-            disabled={deletePubLoading || !deletePubId.trim()}
-            className="bg-red-500/20 hover:bg-red-500/30 text-red-400 px-5 py-2.5 rounded-xl text-sm font-medium transition-colors flex items-center gap-2 disabled:opacity-50"
-          >
-            {deletePubLoading ? <IconLoader2 size={16} className="animate-spin" /> : <IconTrash size={16} />}
-            Eliminar
-          </button>
-        </div>
-        {deletePubMsg && (
-          <p className={`mt-3 text-sm flex items-center gap-2 ${
-            deletePubMsg.type === 'ok' ? 'text-[#00A86B]' : 'text-red-400'
-          }`}>
-            {deletePubMsg.type === 'ok' ? <IconCheck size={14} /> : <IconAlertTriangle size={14} />}
-            {deletePubMsg.text}
-          </p>
-        )}
-      </div>*/}
 
       {/* ─── Audit History Section ─── */}
       <div className="bg-[#1A2E2F] border border-[#2D4A4C] rounded-2xl overflow-hidden">
